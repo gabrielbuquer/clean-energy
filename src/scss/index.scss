@@ -1,0 +1,21 @@
+//Utils
+@import "utils/variable";
+@import "utils/normalize";
+@import "utils/mixin";
+@import "utils/containers";
+
+//Partials
+@import "partials/header";
+@import "partials/footer"; 
+
+//Pages 
+@import "pages/home";
+
+//Components
+@import "components/summary";
+@import "components/overlay";
+
+html{
+    margin-bottom: 3000px;
+}
+   

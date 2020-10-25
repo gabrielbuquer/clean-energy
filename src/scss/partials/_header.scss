@@ -1,0 +1,137 @@
+.header{
+    color: #ffff;
+    &__wrapper{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 70px;
+    }
+    &__logo{
+        transition: all .2s ease-in-out;
+        a{
+            color: $text-color;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 30px;
+        }
+        &:hover{
+            transform: scale(.97);
+            transition: all .25s ease-in-out;
+        }
+    }
+    &__nav{
+        display: flex;
+        height: 100%;
+        &__mobile{
+            @include mq(md, min){
+                display: none;
+            }
+        }
+        &__wrapper{
+            display: flex;
+            @include mq(md, max){
+                position: fixed;
+                display: block;
+                top: 0;
+                right: -100%;
+                opacity: 0;
+                width: 80%;
+                height: 100%;
+                z-index: 12;
+                border-radius: 0px 0 0 15px;
+                background-color: $color-white;
+                box-shadow: 0 2px 8px rgba(0,0,0,.2);
+                transition: all .3s ease-in-out;
+                &.open{
+                    right: 0;
+                    opacity: 1;
+                    li{
+                        @for $i from 1 through 5 {
+                            &:nth-child(#{$i}){
+                                a{
+                                    &::after{
+                                        width: 100%;
+                                        -webkit-transition-delay: $i * 0.3s;
+                                        transition-delay: $i * 0.3s ;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            nav{
+                display: inherit;
+               
+                 ul{
+                     display: inherit;
+                     li{
+                         display: inline-flex;
+                         align-items: center;
+                         color: $text-color;
+                         margin: 0 5px;
+                         @include mq(md, max){
+                            display: block;
+                            padding: 5px 0px;
+                            margin: 0 15px;
+                         }
+                         a{
+                             display: flex;
+                             align-items: center;
+                             height: 100%;
+                             color: $text-color;
+                             text-decoration: none;
+                             font-size: 16px;
+                             position: relative;
+                             transition: all .2s ease-in-out;
+                             @include mq(md, max){
+                                padding: 8px 0;
+                                display: inline-block;
+                                width: auto;
+                                font-size: 18px;
+                             }
+                             &::after{
+                                 content: '';
+                                 position: absolute;
+                                 width: 0;
+                                 height: 3px;
+                                 background: $primary-color;
+                                 bottom: 0;
+                                 left: 50%;
+                                 transform: translateX(-50%);
+                                 transition: all .2s ease-in-out;
+                                 @include mq(md, max){
+                                    
+                                    left: 0;
+                                    transform: translateX(0px);
+                                    
+                                 }
+                             }
+                             &:hover{
+                                 color: $primary-color;
+                                 transition: all .2s ease-in-out;
+                                 &::after{
+                                     transition: all .2s ease-in-out;
+                                     width: 100%;
+                                 }
+                             }
+                             
+                         }
+                     }
+                 }
+             }
+        }
+        
+        
+    }
+    &.fixed {
+        position: fixed;
+        width: 100%;
+        transition: all .3s ease-in-out;
+        &.active{
+            z-index: 9;
+            background-color: $color-white;
+            box-shadow: 0 2px 8px rgba(0,0,0,.2);
+        }
+    }
+}

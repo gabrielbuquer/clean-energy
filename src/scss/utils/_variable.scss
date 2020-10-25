@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+$font-family: 'Poppins', sans-serif;
+ 
+$primary-color: #FFC107;
+$secondary-color: #000;
+
+$text-color: #000;
+$text-color2: #474747;
+
+$color-white: #FFF;
+
+$breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+
+$z-index: (
+	menu:15,
+	popup-add-cart:10,
+	dropdown: 10,
+	flag-prateleira:5,
+	comprar-flutuante: 5,
+	avise-me:5,
+	scroll-top:7,
+	header-fixo:10,
+	popup-user:15
+) !default;

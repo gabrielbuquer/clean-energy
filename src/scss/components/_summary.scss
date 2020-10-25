@@ -1,0 +1,88 @@
+.summary{
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 60px auto;
+    &__menu{
+        display: flex;
+        align-items: center; 
+        width: 100%;
+        height: 50px;
+        gap: 2px;  
+        cursor: pointer; 
+        li{   
+            flex: 1;
+            background-color: $secondary-color;
+            color: $color-white;
+            transition: all .2s ease-in-out;
+            &:first-child{
+                border-radius: 5px 0 0 5px;
+            }
+            &:last-child{
+                border-radius: 0px 5px 5px 0px;
+            }
+            p{
+                padding: 20px 10px;
+                text-align: center;
+                text-transform: uppercase;
+                font-weight: 700;
+            }
+            &.active{
+                background-color: $primary-color;
+                color: $text-color;
+            }
+        }
+    }
+    &__content{
+        >.content{
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            column-gap: 80px;
+            max-height: 0;
+            transform: translateY(60px);
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity .2s linear, visibility .2s linear, transform 0s linear .2s;
+            @include mq(md, max){
+                grid-template-columns: 1fr;
+                row-gap: 50px;
+            }
+            .content__info{
+                h3{
+                    font-size: 80px;
+                    font-weight: bold;
+                    color: transparent;
+                    -webkit-text-stroke: 2px $secondary-color;
+                    text-stroke: 2px $secondary-color;
+                    text-shadow: none;
+                    
+                }
+                p{
+                    margin-top: 20px;
+                    line-height: 26px;
+                }
+            }
+            .content__image{
+                display: flex;
+                img{
+                    width: 100%;
+                    border-radius: 50%;
+                    margin: auto;
+                    border: solid 3px $secondary-color;
+                    @include mq(md, max){
+                        width: 80%;
+                        
+                    }
+                }
+                
+            }
+            &.active{
+                visibility: visible;
+                transform: translateY(0px);
+                opacity: 1;
+                transition: all .3s linear;
+                transition-delay: .3s;
+            }
+        }
+    }
+}
