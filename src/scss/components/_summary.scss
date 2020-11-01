@@ -10,7 +10,14 @@
         height: 50px;
         gap: 2px;  
         cursor: pointer; 
+        @include mq(md, max){
+            align-items: stretch;
+            height: 70px;
+        }
         li{   
+            display: flex;
+            align-items: center;
+            justify-content: center;
             flex: 1;
             background-color: $secondary-color;
             color: $color-white;
@@ -22,6 +29,7 @@
                 border-radius: 0px 5px 5px 0px;
             }
             p{
+                width: 100%;
                 padding: 20px 10px;
                 text-align: center;
                 text-transform: uppercase;
@@ -35,17 +43,16 @@
     }
     &__content{
         >.content{
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            column-gap: 80px;
-            max-height: 0;
+            display: flex;
+            gap: 80px;
+            height: 0;
             transform: translateY(60px);
             visibility: hidden;
             opacity: 0;
-            transition: opacity .2s linear, visibility .2s linear, transform 0s linear .2s;
+            transition: opacity 0.2s linear, visibility .2s linear, transform 0.2 linear, height 0s linear .3s;
+            
             @include mq(md, max){
-                grid-template-columns: 1fr;
-                row-gap: 50px;
+                flex-direction: column;
             }
             .content__info{
                 h3{
@@ -55,7 +62,9 @@
                     -webkit-text-stroke: 2px $secondary-color;
                     text-stroke: 2px $secondary-color;
                     text-shadow: none;
-                    
+                    @include mq(md, max){
+                        font-size: 60px;
+                    }
                 }
                 p{
                     margin-top: 20px;
@@ -64,6 +73,7 @@
             }
             .content__image{
                 display: flex;
+                flex: 0 0 30%;
                 img{
                     width: 100%;
                     border-radius: 50%;
@@ -80,8 +90,10 @@
                 visibility: visible;
                 transform: translateY(0px);
                 opacity: 1;
-                transition: all .3s linear;
-                transition-delay: .3s;
+                height: auto; 
+                transition: opacity .2s linear, transform .3s linear,  height 0s linear .3s;
+                transition-delay: .5s;
+                
             }
         }
     }

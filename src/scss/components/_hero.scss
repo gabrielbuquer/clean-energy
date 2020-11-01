@@ -1,0 +1,24 @@
+.hero{
+    position: relative;
+    
+    height: 500px;
+    background-size: cover;
+    &__content{
+        position: absolute;
+        bottom: 50px;
+        h1{
+            font-size: 40px;
+            font-weight: 700;
+            color: #fff;
+        }
+    }
+    &.home-hero{
+        background-image: url('/src/img/home_hero.jpg');
+    }
+    &.problema-hero{
+        background-image: url('/src/img/problema_hero.jpg');
+    }
+    &.contato-hero{
+        background-image: url('/src/img/contato_hero.jpg');
+    }
+}

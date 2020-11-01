@@ -1,5 +1,4 @@
 .header{
-    color: #ffff;
     &__wrapper{
         display: flex;
         justify-content: space-between;
@@ -120,18 +119,23 @@
                      }
                  }
              }
-        }
-        
-        
+        }  
     }
     &.fixed {
         position: fixed;
+        z-index: 9;
         width: 100%;
         transition: all .3s ease-in-out;
         &.active{
-            z-index: 9;
             background-color: $color-white;
             box-shadow: 0 2px 8px rgba(0,0,0,.2);
+        }
+    }
+    &.light{
+        &:not(.active){
+            a{
+                color: #FFF;
+            }
         }
     }
 }

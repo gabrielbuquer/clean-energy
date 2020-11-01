@@ -1,0 +1,29 @@
+main{
+    section.content{
+        margin: 30px auto;
+        h2{
+            font-size: 20px; 
+            position: relative;
+            padding: 10px 0;
+            display: inline-flex;
+            margin-bottom: 30px;
+            @include mq(md, max){
+                padding-left: 10px;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                width: 40%;
+                height: 2px;
+                background-color: $primary-color-dark;
+                @include mq(md, max){
+                    height: 100%;
+                    width: 2px;
+                    top: 0;
+                }
+            }
+        }
+    }
+}

@@ -4,18 +4,25 @@
 @import "utils/mixin";
 @import "utils/containers";
 
+//Lib
+@import "lib/slick";
+
 //Partials
 @import "partials/header";
 @import "partials/footer"; 
 
-//Pages 
+//Pages
+@import "pages/geral";
 @import "pages/home";
+@import "pages/contato";
+@import "pages/problema";
+@import "pages/iniciativas";
 
 //Components
 @import "components/summary";
 @import "components/overlay";
+@import "components/hero";
+@import "components/action-contato";
+@import "components/back-to-top";
 
-html{
-    margin-bottom: 3000px;
-}
    

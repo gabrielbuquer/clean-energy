@@ -9,7 +9,7 @@ class Parallax {
         $(window).scroll(() => {
             let scrollTop = $(window).scrollTop();
             let backgroundPosition = "50% " + (scrollTop * this.opts.speed) + "px";
-            $(".home__hero").css("background-position", backgroundPosition);
+            $(".hero, .stats").css("background-position", backgroundPosition);
         })
     }
 }

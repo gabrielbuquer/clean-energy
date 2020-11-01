@@ -1,0 +1,92 @@
+.footer{
+    background-color: $secondary-color;
+    &__wrapper{
+        display: grid;
+        grid-template-columns: 1fr 1.5fr 1.5fr;
+        column-gap: 30px;
+        padding: 80px 0;
+        @include mq(md, max){
+            grid-template-columns: 1fr;
+            row-gap: 30px;
+        }
+        >div{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__logo{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+        a{
+            color: $color-white;
+            font-weight: 700;
+            text-decoration: none;
+            font-size: 50px;
+            text-align: center;
+            &::after{
+                content: '';
+                width: 2px;
+                height: 50px;
+                display: flex;
+                justify-content: center;
+                margin: auto;
+                background: $primary-color;
+    
+            }
+        }
+        p{
+            color: $color-white;
+            font-size: 12px;
+            text-align: center;
+        }
+    }
+    &__infos{
+        @include mq(md, max){
+            width: 70%;
+            margin: auto;
+        }
+        p{
+            color: $color-white;
+            font-size: 14px;
+            line-height: 18px;
+            @include mq(md, max){
+                text-align: center;
+            }
+        }
+    }
+    &__menu{
+        ul{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            li{
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                a{
+                    color: $color-white;
+                    position: relative;
+                    text-decoration: none;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        width: 100%;
+                        height: 2px;
+                        background: #FFC107;
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+            }
+        }
+    }
+    &__bottom{
+        background-color: $primary-color;
+        padding: 8px 0;
+        p{
+            text-align: center;
+        }
+    }
+}

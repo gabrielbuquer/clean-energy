@@ -5,6 +5,7 @@ class Header {
         this.overlay = new Overlay(".header__nav");
         this.selectors();
         this.events();
+        this.initHeader();
         
     }   
     selectors(){
@@ -12,6 +13,11 @@ class Header {
         this.btnMenuMobile = $(".header__nav__mobile button");
         this.navWrapper = $(".header__nav__wrapper");
         this.overlayMenu = $(".header__nav .overlay");
+    }
+    initHeader() {
+        if($(window).scrollTop()){
+            this.headerFixo.addClass('active');
+        }
     }
     events(){
         $(window).scroll(this.scrollFixedHeader.bind(this));
@@ -27,7 +33,6 @@ class Header {
         this.overlay.toggle();
     }
     scrollFixedHeader(e){
-        console.log($(e.target).scrollTop())
         let scrollTop = $(e.target).scrollTop();
         if(scrollTop > 5){
             this.headerFixo.addClass('active');

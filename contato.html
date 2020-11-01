@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <link rel="stylesheet" href="dist/css/index.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="shortcut icon" href="src/img/favicon.png" />
+    <title>Contato - Energy</title>
+</head>
+<body>
+    <header class="header fixed">
+        <div class="header__wrapper container">
+            <div class="header__logo">
+                <a href="/">
+                    energy
+                </a>
+            </div>
+            <div class="header__nav">
+                <div class="header__nav__mobile">
+                    <button class="hamburger" type="button">
+                        <span class="hamburger-box">
+                          <span class="hamburger-inner"></span>
+                        </span>
+                    </button>
+                </div>
+                <div class="header__nav__wrapper">
+                    <nav>
+                        <ul>
+                            <li> 
+                                <a href="/">Home</a>
+                            </li>
+                            <li> 
+                                <a href="/problema.html">O Problema </a>
+                            </li>
+                            <li> 
+                                <a href="/energia-limpa.html">Energia Limpa </a>
+                            </li>
+                            <li> 
+                                <a href="/iniciativas.html">Iniciativas </a>
+                            </li>
+                            <li> 
+                                <a href="/contato.html">Contato </a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <div class="header__nav__social">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <main class="contato">
+        <section class="hero contato-hero">
+            <div class="hero__wrapper container">
+                <div class="hero__content">
+                    <h1> Contato </h1>    
+                </div>
+            </div>
+        </section>
+        <section class="contato__dados container">
+            <a href="https://api.whatsapp.com/send?phone=552299999999999" target="_blank" rel="noopener">
+                <div class="icone">
+                    <i class="fa fa-phone"></i>
+                </div>
+                <p>(22) 99999-9999</p>
+
+            </a>
+            <a href="mailto:contato@energy.com.br">
+                <div class="icone">
+                    <i class="fa fa-envelope"></i>
+                </div>
+                <p>contato@energy.com.br</p>
+            </a>
+            <a href="#form-contato">
+                <div class="icone">
+                    <i class="fa fa-paper-plane"></i>
+                </div>
+                <p>Nos envie uma mensagem!</p>
+            </a>
+        </section>
+        <section id="form-contato" class="contato__mensagem container">
+            <div class="contato__mensagem__wrapper">
+                <h3> Use o formulário abaixo para nos enviar <span>uma mensagem!</span> </h3>
+                <form>
+                    <div class="column">
+                        <div class="input_nome">
+                            <label for="nome"> Nome: </label>
+                            <input type="text" id="nome"/>
+                        </div>
+                        <div class="input_sobrenome">
+                            <label for="sobrenome"> Sobrenome: </label>
+                            <input type="text" id="sobrenome"/>
+                        </div>
+                        <div class="input_email">
+                            <label for="email"> Email: </label>
+                            <input type="text" id="email"/>
+                        </div>
+                        <div class="input_telefone">
+                            <label for="telefone"> Telefone: </label>
+                            <input type="text" id="telefone"/>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="input_mensagem">
+                            <label for="mensagem"> Mensagem: </label>
+                            <textarea type="text" id="mensagem"></textarea>
+                        </div>
+                    </div>
+                    <input class="submit" type="submit" value="Enviar" />
+                </form>
+            </div>
+
+        </section>
+    </main>
+    <footer class="footer">  
+        <div class="footer__wrapper container">
+            <div class="footer__logo">
+                <a href="/">
+                    energy
+                </a>
+                <p> Mussum Ipsum, cacilds vidis litro abertis. In elementis mé pra quem é amistosis quis leo. </p>
+            </div>
+            <div class="footer__infos">
+                <p> Mussum Ipsum, cacilds vidis litro abertis. In elementis mé pra quem é amistosis quis leo. Suco de cevadiss, é um leite divinis, qui tem lupuliz, matis, aguis e fermentis. A ordem dos tratores não altera o pão duris. Aenean aliquam molestie leo, vitae iaculis nisl.</p>
+            </div>
+            <div class="footer__menu">
+                <ul>
+                    <li> 
+                        <a href="">Sobre nós</a>
+                    </li>
+                    <li> 
+                        <a href="">O Problema </a>
+                    </li>
+                    <li> 
+                        <a href="">Energia Limpa </a>
+                    </li>
+                    <li> 
+                        <a href="">Iniciativas </a>
+                    </li>
+                    <li> 
+                        <a href="">Contato </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer__bottom">
+            <p>Copyright &copy; 2020 - Design and Develpment by Gabriel Buquer</p>
+        </div>
+    </footer>
+    <script type="module" src="./dist/energy-bundle.js"></script>
+</body>
+</html>

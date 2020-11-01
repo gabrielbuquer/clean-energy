@@ -1,0 +1,120 @@
+.contato{
+    &__dados{
+        display: flex;
+        gap: 5px;
+        margin: 60px auto;
+        padding: 0;
+        @include mq(md, max){
+            flex-direction: column;
+            gap: 10px;
+        }
+        &>a{
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            gap: 20px;
+            background-color: $primary-color;
+            transition: all .3s ease-in-out;
+            padding: 30px;
+            color: $text-color;
+            font-size: 20px;
+            text-decoration: none;
+
+            &:hover{
+                background-color: $primary-color-dark;
+            }
+            .icone{
+                i{
+                    font-size: 40px;
+                }
+            }
+        }
+        
+    }
+    &__mensagem{
+        margin: 60px auto;
+        border: 4px solid $primary-color;
+        padding: 50px;
+        @include mq(md, max){
+            padding: 50px 20px;
+        }
+        h3{
+            font-size: 24px;
+            font-weight: 700;
+            color: $text-color;
+            span{
+                color: $primary-color-dark;
+            }
+        }
+        form{
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: 40px;
+            row-gap: 40px;
+            margin-top: 30px;
+            @include mq(md, max){
+                grid-template-columns: 1fr;
+            }
+            .column{
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                row-gap: 40px;
+                column-gap: 20px;
+                @include mq(md, max){
+                    grid-template-columns: 1fr;
+                }
+                >div{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    input, textarea{
+                        border: none;
+                        background-color: $color-gray;
+                        outline: none;
+                        border-radius: 2px;
+                        padding: 10px;
+                        transition: all .2s ease-in-out;
+                        &:focus{
+                            background-color: $color-gray-dark;
+                        }
+                    }
+                    textarea{
+                        resize: none;
+                        height: 100%;
+                    }
+                }
+            }
+            .submit{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: auto;
+                margin: 0 0 0 auto;
+                border: none;
+                outline: none;
+                background-color: $secondary-color;
+                color: $color-white;
+                padding: 10px 40px;
+                font-size: 18px;
+                font-weight: 700;
+                text-transform: uppercase;
+                cursor: pointer;
+                @include mq(md, min){
+                    grid-column: span 2;
+                }
+            }
+            @include mq(md, min){
+                .input_email, .input_telefone{
+                    grid-column: span 2;
+                }
+                .input_mensagem{
+                    grid-column: span 2;
+                }
+            }
+            
+        }
+        
+    }
+}
