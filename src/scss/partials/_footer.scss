@@ -69,6 +69,7 @@
                     color: $color-white;
                     position: relative;
                     text-decoration: none;
+                    padding-bottom: 4px;
                     &::after{
                         content: '';
                         position: absolute;

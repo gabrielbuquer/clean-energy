@@ -1,6 +1,14 @@
 main{
     section.content{
-        margin: 30px auto;
+        margin: 60px auto;
+        
+        &.column{
+            display: flex;
+            gap: 50px;
+        }
+        @include mq(md, max){
+            flex-direction: column-reverse;
+        }
         h2{
             font-size: 20px; 
             position: relative;
@@ -23,6 +31,53 @@ main{
                     width: 2px;
                     top: 0;
                 }
+            }
+        }
+        p{
+            line-height: 18px;
+            color: $text-color2;
+        }
+        >div{
+            flex: 1;
+        }
+        .section-img{
+            position: relative;
+            display: flex;
+            img{
+                position: relative;
+                width: 100%;
+                margin: 15px 0px 0px 15px;
+                z-index: 1;
+                @include mq(md, max){
+                    width: calc(100% - 15px);
+                }
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                background-color: $primary-color;
+                width: 80%;
+                height: 80%;
+                top: 0;
+                left: 0;
+            }
+        }
+    }
+    .see-more{
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        color: $text-color;
+        font-size: 16px;
+        text-decoration: none;
+        margin-top: 20px;
+        font-weight: 700;
+        i{
+            transition: all .2s ease-in-out;
+        }
+        &:hover{
+            i{
+                transform: translateX(10px);
             }
         }
     }

@@ -20,14 +20,24 @@
     }
     &__nav{
         display: flex;
+        align-items: center;
         height: 100%;
         &__mobile{
+            button{
+                background: transparent;
+                border: none;
+                outline: none;
+                i{
+                    font-size: 30px;
+                }
+            }
             @include mq(md, min){
                 display: none;
             }
         }
         &__wrapper{
             display: flex;
+            height: 100%;
             @include mq(md, max){
                 position: fixed;
                 display: block;
@@ -56,12 +66,33 @@
                                 }
                             }
                         }
+                        a{
+                            color: $text-color!important;
+                        }
                     }
+                }
+                nav{
+                    @include mq(md, max){
+                        .nav-mobile-close{
+                            display: block!important;
+                            border: none;
+                            background-color: transparent;
+                            outline: none;
+                            margin: 5px 15px;
+                            padding: 0;
+                            i{
+                                font-size: 30px;
+                                color: $text-color!important;
+                            }
+                        }
+                    } 
                 }
             }
             nav{
                 display: inherit;
-               
+                .nav-mobile-close{
+                     display: none;   
+                }
                  ul{
                      display: inherit;
                      li{
@@ -133,7 +164,7 @@
     }
     &.light{
         &:not(.active){
-            a{
+            a,i{
                 color: #FFF;
             }
         }

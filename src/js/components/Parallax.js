@@ -1,15 +1,15 @@
 class Parallax {
-    constructor() {
+    constructor(element, speed) {
         this.opts = {
-            speed: 0.5
+            speed: speed
         }
-        this.parallaxImage();
+        this.parallaxImage(element);
     }   
-    parallaxImage() {
+    parallaxImage(element) {
         $(window).scroll(() => {
             let scrollTop = $(window).scrollTop();
             let backgroundPosition = "50% " + (scrollTop * this.opts.speed) + "px";
-            $(".hero, .stats").css("background-position", backgroundPosition);
+            $(element).css("background-position", backgroundPosition);
         })
     }
 }

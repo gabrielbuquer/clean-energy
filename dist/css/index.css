@@ -184,12 +184,20 @@ html::-moz-selection, html::selection {
 
 .header__nav {
   display: flex;
+  align-items: center;
   height: 100%; }
+  .header__nav__mobile button {
+    background: transparent;
+    border: none;
+    outline: none; }
+    .header__nav__mobile button i {
+      font-size: 30px; }
   @media only screen and (min-width: 768px) {
     .header__nav__mobile {
       display: none; } }
   .header__nav__wrapper {
-    display: flex; }
+    display: flex;
+    height: 100%; }
     @media only screen and (max-width: 767px) {
       .header__nav__wrapper {
         position: fixed;
@@ -226,9 +234,24 @@ html::-moz-selection, html::selection {
           .header__nav__wrapper.open li:nth-child(5) a::after {
             width: 100%;
             -webkit-transition-delay: 1.5s;
-            transition-delay: 1.5s; } }
+            transition-delay: 1.5s; }
+          .header__nav__wrapper.open li a {
+            color: #000 !important; } }
+  @media only screen and (max-width: 767px) and (max-width: 767px) {
+    .header__nav__wrapper nav .nav-mobile-close {
+      display: block !important;
+      border: none;
+      background-color: transparent;
+      outline: none;
+      margin: 5px 15px;
+      padding: 0; }
+      .header__nav__wrapper nav .nav-mobile-close i {
+        font-size: 30px;
+        color: #000 !important; } }
     .header__nav__wrapper nav {
       display: inherit; }
+      .header__nav__wrapper nav .nav-mobile-close {
+        display: none; }
       .header__nav__wrapper nav ul {
         display: inherit; }
         .header__nav__wrapper nav ul li {
@@ -286,7 +309,7 @@ html::-moz-selection, html::selection {
     background-color: #FFF;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2); }
 
-.header.light:not(.active) a {
+.header.light:not(.active) a, .header.light:not(.active) i {
   color: #FFF; }
 
 .footer {
@@ -348,7 +371,8 @@ html::-moz-selection, html::selection {
       .footer__menu ul li a {
         color: #FFF;
         position: relative;
-        text-decoration: none; }
+        text-decoration: none;
+        padding-bottom: 4px; }
         .footer__menu ul li a::after {
           content: '';
           position: absolute;
@@ -364,7 +388,13 @@ html::-moz-selection, html::selection {
       text-align: center; }
 
 main section.content {
-  margin: 30px auto; }
+  margin: 60px auto; }
+  main section.content.column {
+    display: flex;
+    gap: 50px; }
+  @media only screen and (max-width: 767px) {
+    main section.content {
+      flex-direction: column-reverse; } }
   main section.content h2 {
     font-size: 20px;
     position: relative;
@@ -387,26 +417,23 @@ main section.content {
           height: 100%;
           width: 2px;
           top: 0; } }
-
-.home__hero {
-  background-image: url("/src/img/home_hero.jpeg");
-  height: 500px;
-  background-size: cover; }
-
-.home .sobre-nos {
-  display: flex;
-  gap: 40px; }
-  @media only screen and (max-width: 767px) {
-    .home .sobre-nos {
-      flex-direction: column-reverse; } }
-  .home .sobre-nos__img {
-    position: relative; }
-    .home .sobre-nos__img img {
+  main section.content p {
+    line-height: 18px;
+    color: #474747; }
+  main section.content > div {
+    flex: 1; }
+  main section.content .section-img {
+    position: relative;
+    display: flex; }
+    main section.content .section-img img {
       position: relative;
       width: 100%;
       margin: 15px 0px 0px 15px;
       z-index: 1; }
-    .home .sobre-nos__img::after {
+      @media only screen and (max-width: 767px) {
+        main section.content .section-img img {
+          width: calc(100% - 15px); } }
+    main section.content .section-img::after {
       content: '';
       position: absolute;
       background-color: #e8b61c;
@@ -414,12 +441,74 @@ main section.content {
       height: 80%;
       top: 0;
       left: 0; }
-  .home .sobre-nos__text h2 {
-    font-size: 28px; }
+
+main .see-more {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #000;
+  font-size: 16px;
+  text-decoration: none;
+  margin-top: 20px;
+  font-weight: 700; }
+  main .see-more i {
+    transition: all .2s ease-in-out; }
+  main .see-more:hover i {
+    transform: translateX(10px); }
+
+.home__hero {
+  background-image: url("/src/img/home_hero.jpeg");
+  height: 500px;
+  background-size: cover; }
+
+.home .sobre-nos__text h2 {
+  font-size: 28px; }
 
 .home .stats {
-  height: 300px;
-  background-image: url("/src/img/banner-stats.jpg"); }
+  position: relative;
+  background-image: url("/src/img/banner-stats.jpg");
+  background-size: cover;
+  padding: 80px 0; }
+  .home .stats__overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-color: rgba(232, 182, 28, 0.75); }
+  .home .stats__wrapper {
+    position: relative;
+    z-index: 2; }
+    .home .stats__wrapper h2 {
+      text-align: center;
+      font-size: 28px;
+      color: #FFF;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase; }
+  .home .stats__list {
+    display: flex;
+    gap: 10px;
+    margin-top: 60px; }
+    @media only screen and (max-width: 767px) {
+      .home .stats__list {
+        flex-direction: column; } }
+    .home .stats__list__item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      gap: 10px; }
+      .home .stats__list__item i {
+        font-size: 50px; }
+      .home .stats__list__item p {
+        font-size: 28px;
+        font-weight: 700; }
+      .home .stats__list__item span {
+        text-align: center; }
 
 .contato__dados {
   display: flex;
@@ -518,6 +607,31 @@ main section.content {
       .contato__mensagem form .input_mensagem {
         grid-column: span 2; } }
 
+.problema .menu-problemas__wrapper {
+  display: flex;
+  gap: 25px; }
+  .problema .menu-problemas__wrapper a {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-decoration: none;
+    color: #000;
+    transition: all .2s ease-in-out; }
+    .problema .menu-problemas__wrapper a img {
+      margin: auto; }
+    .problema .menu-problemas__wrapper a p {
+      text-align: center; }
+    .problema .menu-problemas__wrapper a:hover {
+      transform: scale(1.05); }
+  .problema .menu-problemas__wrapper button {
+    background-color: transparent;
+    border: none;
+    outline: none; }
+    .problema .menu-problemas__wrapper button i {
+      font-size: 30px; }
+
 .iniciativas__slider .slider-title {
   display: flex;
   justify-content: space-between;
@@ -568,6 +682,27 @@ main section.content {
         width: 100%;
         height: 2px;
         background-color: #d5a30a; }
+
+.energia-limpa .charts #matrizes-energeticas {
+  display: flex;
+  justify-content: center; }
+
+.energia-limpa .charts .control-chart {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 30px; }
+  .energia-limpa .charts .control-chart a {
+    padding: 10px;
+    background-color: #1b1b1b;
+    color: #FFF;
+    transition: all .2s ease-in-out;
+    border-radius: 4px;
+    cursor: pointer; }
+    .energia-limpa .charts .control-chart a.active, .energia-limpa .charts .control-chart a:hover {
+      background-color: #e8b61c;
+      color: #1b1b1b; }
 
 .summary {
   display: flex;
@@ -677,6 +812,8 @@ main section.content {
       color: #fff; }
   .hero.home-hero {
     background-image: url("/src/img/home_hero.jpg"); }
+  .hero.energia-limpa-hero {
+    background-image: url("/src/img/energia-limpa_hero.jpg"); }
   .hero.problema-hero {
     background-image: url("/src/img/problema_hero.jpg"); }
   .hero.contato-hero {

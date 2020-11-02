@@ -1,9 +1,38 @@
 import ApexCharts from 'apexcharts';
-
+import slick from 'slick-slider';
 class Problema { 
     constructor() {
         this.maioresPoluentes();
+        this.menuProblemas();
     }   
+    menuProblemas() {
+      $(".menu-problemas__wrapper").slick({
+        infinite: false,
+        slidesToShow: 6,
+        slidesToScroll: 1,
+        prevArrow:"<button type='button' class='slick-prev pull-left'><i class='fa fa-angle-left' aria-hidden='true'></i></button>",
+        nextArrow:"<button type='button' class='slick-next pull-right'><i class='fa fa-angle-right' aria-hidden='true'></i></button>",
+        arrows: false,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow: 4,
+                    dots: false,
+                    arrows: true
+                },
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    dots: false,
+                    arrows: true
+                }
+            }
+        ]
+      });
+    }
     maioresPoluentes() {
         let options = {
           series: [
@@ -19,7 +48,7 @@ class Problema {
           plotOptions: {
             bar: {
               dataLabels: {
-                position: "top", // top, center, bottom
+                position: "top", 
               },
             },
           },
@@ -90,9 +119,8 @@ class Problema {
           },
         };
         
-
-        var chart = new ApexCharts(document.querySelector("#maiores-poluentes"), options)
-        chart.render()
+        var chart = new ApexCharts(document.querySelector("#maiores-poluentes"), options);
+        chart.render();
     }
 }
 export default Problema;

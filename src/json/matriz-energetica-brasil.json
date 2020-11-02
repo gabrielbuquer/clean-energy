@@ -1,0 +1,4 @@
+{
+    "series": [4.1, 6.9, 8.2, 65.2, 2.6, 10.5, 2.5],
+    "label": ["Carvão", "Solar, eólica, geotérmica e maré", "Biomassa", "Hidraúlica", "Nuclear", "Gás Natural", "Petróleo e derivados"]
+}

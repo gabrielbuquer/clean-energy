@@ -1,5 +1,35 @@
 .problema{
-    section.content{
-       
+    .menu-problemas{
+        &__wrapper{
+            display: flex;
+            gap: 25px;
+            a{
+                flex: 1;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex-direction: column;
+                text-decoration: none;
+                color: $text-color;
+                transition: all .2s ease-in-out;
+                img{
+                    margin: auto;
+                }
+                p{
+                    text-align: center;
+                }
+                &:hover{
+                    transform: scale(1.05)
+                }
+            }
+            button{
+                background-color: transparent;
+                border: none;
+                outline: none;
+                i{
+                    font-size: 30px;
+                }
+            }
+        }
     }
 }

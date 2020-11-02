@@ -13,6 +13,7 @@ class Header {
         this.btnMenuMobile = $(".header__nav__mobile button");
         this.navWrapper = $(".header__nav__wrapper");
         this.overlayMenu = $(".header__nav .overlay");
+        this.closeMobile = $(".header__nav .nav-mobile-close")
     }
     initHeader() {
         if($(window).scrollTop()){
@@ -23,6 +24,7 @@ class Header {
         $(window).scroll(this.scrollFixedHeader.bind(this));
         this.btnMenuMobile.click(this.toggleMenuMobile.bind(this));
         this.overlayMenu.click(this.closeOverlayAndMenu.bind(this));
+        this.closeMobile.click(this.closeOverlayAndMenu.bind(this));
     }
     closeOverlayAndMenu(){
         this.navWrapper.removeClass("open");

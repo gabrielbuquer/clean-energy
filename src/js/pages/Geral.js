@@ -7,7 +7,8 @@ class Geral {
     constructor() {
         new Header();  
         new Summary();
-        new Parallax();
+        new Parallax(".hero", 0.5);
+        new Parallax(".stats", 0.7);
         new BackToTop();
     }   
 }

@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
     <link rel="stylesheet" href="dist/css/index.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="shortcut icon" href="src/img/favicon.png" />
     <title>O Problema - Energy</title>
 </head>
 <body>
-    <header class="header fixed light">
+    <header class="header light fixed">
         <div class="header__wrapper container">
             <div class="header__logo">
                 <a href="/">
@@ -18,14 +18,15 @@
             </div>
             <div class="header__nav">
                 <div class="header__nav__mobile">
-                    <button class="hamburger" type="button">
-                        <span class="hamburger-box">
-                          <span class="hamburger-inner"></span>
-                        </span>
+                    <button type="button">
+                        <i class="fas fa-bars"></i>
                     </button>
                 </div>
                 <div class="header__nav__wrapper">
                     <nav>
+                        <button class="nav-mobile-close">
+                            <i class="fas fa-times"></i>
+                        </button>
                         <ul>
                             <li> 
                                 <a href="/">Home</a>
@@ -67,9 +68,104 @@
                 Manduma pindureta quium dia nois paga. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Per aumento de cachacis, eu reclamis. Vehicula non. Ut sed ex eros. Vivamus sit amet nibh non tellus tristique interdum.
             </p>
         </section>
+        <section class="menu-problemas container">
+            <div class="menu-problemas__wrapper">
+                <a href="#poluicao-ar">
+                    <img src="./src/img/poluicao-ar.png" />
+                    <p>Poluição do ar</p>
+                </a>
+                <a href="#poluicao-mares">
+                    <img src="./src/img/poluicao-agua.png" />
+                    <p>Poluição dos mares</p>
+                </a>
+                <a href="#destruicao-florestas">
+                    <img src="./src/img/poluicao-floresta.png" />
+                    <p>Destruição de florestas e reservas ambientais</p>
+                </a>
+                <a href="#depredacao-ecossistemas">
+                    <img src="./src/img/ecossistema.png" />
+                    <p>Depredação do ecossistema</p>
+                </a>
+                <a href="#risco-a-vida">
+                    <img src="./src/img/vida.png" />
+                    <p> Riscos à vida humana, animal e vegetal </p>
+                </a>
+            </div>
+        </section>
+
+        <section id="poluicao-ar" class="content column container">
+            <div class="section-img">
+                <img src="/src/img/poluicao-ar-banner.jpg">
+            </div>
+            <div class="poluicao-ar__text">
+                <h2>Poluição do ar</h2>
+                <p>Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Si num tem leite então bota uma pinga aí cumpadi! Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Viva Forevis aptent taciti sociosqu ad litora torquent.
+                    <br/><br/>
+                    Cevadis im ampola pa arma uma pindureta. Detraxit consequat et quo num tendi nada. A ordem dos tratores não altera o pão duris. Pra lá , depois divoltis porris, paradis.
+                    <br/><br/>
+                    Delegadis gente finis, bibendum egestas augue arcu ut est. Interagi no mé, cursus quis, vehicula ac nisi. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Casamentiss faiz malandris se pirulitá.</p>
+            </div>
+        </section>
+
         <section class="content problema-poluentes container">
             <h2> Os 10 maiores emissores de CO2 (em toneladas) </h2>
             <div id="maiores-poluentes"></div>
+        </section>
+
+        <section id="poluicao-mares" class="content column container">
+            <div class="poluicao-mares__text">
+                <h2>Poluição dos mares</h2>
+                <p>Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Si num tem leite então bota uma pinga aí cumpadi! Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Viva Forevis aptent taciti sociosqu ad litora torquent.
+                    <br/><br/>
+                    Cevadis im ampola pa arma uma pindureta. Detraxit consequat et quo num tendi nada. A ordem dos tratores não altera o pão duris. Pra lá , depois divoltis porris, paradis.
+                    <br/><br/>
+                    Delegadis gente finis, bibendum egestas augue arcu ut est. Interagi no mé, cursus quis, vehicula ac nisi. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Casamentiss faiz malandris se pirulitá.</p>
+            </div>
+            <div class="section-img">
+                <img src="/src/img/poluicao-mares.jpg">
+            </div>
+        </section>
+
+        <section id="destruicao-florestas" class="content column container">
+            <div class="section-img">
+                <img src="/src/img/destruicao-florestas.jpg">
+            </div>
+            <div class="destruicao-florestas__text">
+                <h2>Destruição de florestas e reservas ambientais</h2>
+                <p>Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Si num tem leite então bota uma pinga aí cumpadi! Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Viva Forevis aptent taciti sociosqu ad litora torquent.
+                    <br/><br/>
+                    Cevadis im ampola pa arma uma pindureta. Detraxit consequat et quo num tendi nada. A ordem dos tratores não altera o pão duris. Pra lá , depois divoltis porris, paradis.
+                    <br/><br/>
+                    Delegadis gente finis, bibendum egestas augue arcu ut est. Interagi no mé, cursus quis, vehicula ac nisi. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Casamentiss faiz malandris se pirulitá.</p>
+            </div>
+        </section>
+
+        <section id="depredacao-ecossistemas" class="content column container">
+            <div class="depredacao-ecossistemas__text">
+                <h2>Depredação do ecossistema</h2>
+                <p>Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Si num tem leite então bota uma pinga aí cumpadi! Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Viva Forevis aptent taciti sociosqu ad litora torquent.
+                    <br/><br/>
+                    Cevadis im ampola pa arma uma pindureta. Detraxit consequat et quo num tendi nada. A ordem dos tratores não altera o pão duris. Pra lá , depois divoltis porris, paradis.
+                    <br/><br/>
+                    Delegadis gente finis, bibendum egestas augue arcu ut est. Interagi no mé, cursus quis, vehicula ac nisi. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Casamentiss faiz malandris se pirulitá.</p>
+            </div>
+            <div class="section-img">
+                <img src="/src/img/depredacao-ecossistemas.jpg">
+            </div>
+        </section>
+        
+        <section id="risco-a-vida" class="content column container">
+            <div class="section-img">
+                <img src="/src/img/risco-a-vida.jpg">
+            </div>
+            <div class="risco-a-vida__text">
+                <h2>Risco à vida humana, animal e vegetal</h2>
+                <p>Mussum Ipsum, cacilds vidis litro abertis. Si u mundo tá muito paradis? Toma um mé que o mundo vai girarzis! Si num tem leite então bota uma pinga aí cumpadi! Em pé sem cair, deitado sem dormir, sentado sem cochilar e fazendo pose. Viva Forevis aptent taciti sociosqu ad litora torquent.
+                    <br/><br/>
+                    Cevadis im ampola pa arma uma pindureta. Detraxit consequat et quo num tendi nada. A ordem dos tratores não altera o pão duris. Pra lá , depois divoltis porris, paradis.
+                    <br/><br/>
+                    Delegadis gente finis, bibendum egestas augue arcu ut est. Interagi no mé, cursus quis, vehicula ac nisi. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Casamentiss faiz malandris se pirulitá.</p>
+            </div>
         </section>
         
         <section class="contato-action">
