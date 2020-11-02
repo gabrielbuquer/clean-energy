@@ -12,20 +12,6 @@ gulp.task('script', function(){
 	new Promise(resolve =>
 		webpack(webpackConfig, (err, stats) => {
 			if (err) console.log("Webpack", err);
-			// console.log(
-			// 	stats.toString({
-			// 		all: false,
-			// 		modules: false,
-			// 		maxModules: 0,
-			// 		errors: false,
-			// 		warnings: false,
-			// 		// our additional options
-			// 		moduleTrace: false,
-			// 		errorDetails: false,
-			// 		colors: false,
-			// 		chunks: false
-			// 	})
-			// );
 			resolve();
 		})
     )
@@ -35,10 +21,10 @@ gulp.task('script', function(){
 gulp.task('server', function() {
     browserSync.init({
         server: {
-            baseDir: "./"
-        }
+            baseDir: ["./pages", "./dist", "./src"]
+        },
     });
-    gulp.watch("*.html").on("change", reload);
+    gulp.watch("pages/*.html").on("change", reload);
 });
 
 gulp.task('sass', function () {

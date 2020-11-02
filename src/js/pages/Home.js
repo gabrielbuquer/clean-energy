@@ -4,9 +4,7 @@ import Summary from "../components/Summary.js";
 
 class Home { 
     constructor() {
-        new Header();  
         new Summary();
-        new Parallax();
     }   
 }
 export default Home;

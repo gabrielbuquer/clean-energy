@@ -63,4 +63,46 @@
             }
         }
     }
+    .info-residencial{
+        &__wrapper{
+            display: flex;
+            align-items: stretch;
+            gap: 20px;
+            @include mq(md, max){
+                flex-direction: column;
+            }
+            >div {
+                flex: 1;
+                display: flex;
+                justify-content: center;
+                text-align: center;
+                flex-direction: column;
+                color: $color-white;
+                background-color: $primary-color-dark;
+                border-radius: 4px;
+                gap: 10px;
+                padding: 20px;
+                transition: all .3s ease-in-out;
+                cursor: pointer;
+                
+                &:hover{
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+                }
+                i{
+
+                }
+                h3{
+                    font-size: 18px;
+                    font-weight: 700;
+                }
+                p{
+                    font-size: 20px;
+                    
+                    small{
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
 }

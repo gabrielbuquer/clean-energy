@@ -12,16 +12,27 @@
             color: #fff;
         }
     }
+    &__overlay{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0, .2);
+    }
     &.home-hero{
-        background-image: url('/src/img/home_hero.jpg');
+        background-image: url('/img/home_hero.jpg');
     }
     &.energia-limpa-hero{
-        background-image: url('/src/img/energia-limpa_hero.jpg');
+        background-image: url('/img/energia-limpa_hero.jpg');
+    }
+    &.iniciativas-hero{
+        background-image: url('/img/iniciativas_hero.jpg');
     }
     &.problema-hero{
-        background-image: url('/src/img/problema_hero.jpg');
+        background-image: url('/img/problema_hero.jpg');
     }
     &.contato-hero{
-        background-image: url('/src/img/contato_hero.jpg');
+        background-image: url('/img/contato_hero.jpg');
     }
 }

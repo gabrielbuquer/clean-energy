@@ -447,17 +447,23 @@ main .see-more {
   align-items: center;
   gap: 8px;
   color: #000;
-  font-size: 16px;
+  font-size: 18px;
   text-decoration: none;
   margin-top: 20px;
-  font-weight: 700; }
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-top: 20px; }
   main .see-more i {
     transition: all .2s ease-in-out; }
   main .see-more:hover i {
     transform: translateX(10px); }
+  main .see-more.light {
+    color: #FFF; }
+  main .see-more.center {
+    justify-content: center; }
 
 .home__hero {
-  background-image: url("/src/img/home_hero.jpeg");
+  background-image: url("/img/home_hero.jpeg");
   height: 500px;
   background-size: cover; }
 
@@ -466,7 +472,7 @@ main .see-more {
 
 .home .stats {
   position: relative;
-  background-image: url("/src/img/banner-stats.jpg");
+  background-image: url("/img/banner-stats.jpg");
   background-size: cover;
   padding: 80px 0; }
   .home .stats__overlay {
@@ -490,7 +496,7 @@ main .see-more {
   .home .stats__list {
     display: flex;
     gap: 10px;
-    margin-top: 60px; }
+    margin: 60px 0; }
     @media only screen and (max-width: 767px) {
       .home .stats__list {
         flex-direction: column; } }
@@ -617,6 +623,7 @@ main .see-more {
     justify-content: center;
     flex-direction: column;
     text-decoration: none;
+    outline: none;
     color: #000;
     transition: all .2s ease-in-out; }
     .problema .menu-problemas__wrapper a img {
@@ -631,6 +638,8 @@ main .see-more {
     outline: none; }
     .problema .menu-problemas__wrapper button i {
       font-size: 30px; }
+  .problema .menu-problemas__wrapper .slick-list {
+    width: 100%; }
 
 .iniciativas__slider .slider-title {
   display: flex;
@@ -682,6 +691,36 @@ main .see-more {
         width: 100%;
         height: 2px;
         background-color: #d5a30a; }
+
+.iniciativas .info-residencial__wrapper {
+  display: flex;
+  align-items: stretch;
+  gap: 20px; }
+  @media only screen and (max-width: 767px) {
+    .iniciativas .info-residencial__wrapper {
+      flex-direction: column; } }
+  .iniciativas .info-residencial__wrapper > div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    color: #FFF;
+    background-color: #d5a30a;
+    border-radius: 4px;
+    gap: 10px;
+    padding: 20px;
+    transition: all .3s ease-in-out;
+    cursor: pointer; }
+    .iniciativas .info-residencial__wrapper > div:hover {
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); }
+    .iniciativas .info-residencial__wrapper > div h3 {
+      font-size: 18px;
+      font-weight: 700; }
+    .iniciativas .info-residencial__wrapper > div p {
+      font-size: 20px; }
+      .iniciativas .info-residencial__wrapper > div p small {
+        font-size: 16px; }
 
 .energia-limpa .charts #matrizes-energeticas {
   display: flex;
@@ -810,14 +849,23 @@ main .see-more {
       font-size: 40px;
       font-weight: 700;
       color: #fff; }
+  .hero__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2); }
   .hero.home-hero {
-    background-image: url("/src/img/home_hero.jpg"); }
+    background-image: url("/img/home_hero.jpg"); }
   .hero.energia-limpa-hero {
-    background-image: url("/src/img/energia-limpa_hero.jpg"); }
+    background-image: url("/img/energia-limpa_hero.jpg"); }
+  .hero.iniciativas-hero {
+    background-image: url("/img/iniciativas_hero.jpg"); }
   .hero.problema-hero {
-    background-image: url("/src/img/problema_hero.jpg"); }
+    background-image: url("/img/problema_hero.jpg"); }
   .hero.contato-hero {
-    background-image: url("/src/img/contato_hero.jpg"); }
+    background-image: url("/img/contato_hero.jpg"); }
 
 .contato-action__wrapper {
   display: flex;
@@ -871,6 +919,7 @@ main .see-more {
   padding: 20px;
   background-color: rgba(232, 182, 28, 0.9);
   border-radius: 50%;
+  z-index: 1;
   cursor: pointer;
   transition: all .4s ease-in-out; }
   .back-to-top.visible {

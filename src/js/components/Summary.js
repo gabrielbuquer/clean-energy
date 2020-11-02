@@ -1,4 +1,3 @@
-import $ from 'jquery'
 class Summary {
     constructor() { 
         this.selectors();
@@ -17,10 +16,8 @@ class Summary {
         let contentId = btnMenu.data('choice');
         this.menu.find('.active').removeClass('active');
         this.summaryContent.find('.active').removeClass('active');
-
         btnMenu.addClass('active');
         this.summaryContent.find(`#${contentId}`).addClass('active');
-    
     }
 }
 export default Summary;
