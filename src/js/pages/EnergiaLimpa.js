@@ -75,8 +75,6 @@ class EnergiaLimpa {
             dataType: "json",
             url: '/clean-energy/src/json/matriz-energetica-mundo.json'
         }).done((data) => {
-            console.log(data.series)
-            console.log(data.label)
             ApexCharts.exec('matrizes-energeticas', 'updateOptions', {
                 label: data.label,
                 series: data.series
@@ -90,8 +88,6 @@ class EnergiaLimpa {
             dataType: "json",
             url: '/clean-energy/src/json/matriz-energetica-brasil.json'
         }).done((data) => {
-            console.log(data.series)
-            console.log(data.label)
             ApexCharts.exec('matrizes-energeticas', 'updateOptions', {
                 label: data.label,
                 series: data.series

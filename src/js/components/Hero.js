@@ -12,9 +12,7 @@ class Hero {
 
     fadeText() {
         $(window).scroll((e) => {
-            console.log('teste')
             let value = ($(e.target).scrollTop()/1000)*2;
-            console.log(value)
             if(value>=0 && value<=1){
                 this.titlePage.css('opacity', (1-value));
             }
