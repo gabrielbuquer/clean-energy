@@ -1,6 +1,6 @@
 .home{
     &__hero{
-        background-image: url('/img/home_hero.jpeg');
+        background-image: url('/clean-energy/src/img/home_hero.jpeg');
         height: 500px;
         background-size: cover;
     }
@@ -13,7 +13,7 @@
     }
     .stats{
         position: relative;
-        background-image: url('/img/banner-stats.jpg');
+        background-image: url('/clean-energy/src/img/banner-stats.jpg');
         background-size: cover;
         padding: 80px 0;
         &__overlay{

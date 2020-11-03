@@ -59,7 +59,7 @@ class EnergiaLimpa {
             type: 'image',
             opacity: 0.85,
             image: {
-               src: ['../img/carvao.jpg', '../img/solar.jpg', '../img/biomassa.jpg', '../img/agua.jpg', '../img/nuclear.jpg', '../img/gas-natural.jpg', '../img/solar.jpg'],
+               src: ['/clean-energy/src/img/carvao.jpg', '/clean-energy/src/img/solar.jpg', '/clean-energy/src/img/biomassa.jpg', '/clean-energy/src/img/agua.jpg', '/clean-energy/src/img/nuclear.jpg', '/clean-energy/src/img/gas-natural.jpg', '/clean-energy/src/img/solar.jpg'],
                 width: 25,
                 imagedHeight: 25
             },
@@ -73,7 +73,7 @@ class EnergiaLimpa {
     updateMundo() {
         $.ajax({
             dataType: "json",
-            url: './json/matriz-energetica-mundo.json'
+            url: '/clean-energy/src/json/matriz-energetica-mundo.json'
         }).done((data) => {
             console.log(data.series)
             console.log(data.label)
@@ -88,7 +88,7 @@ class EnergiaLimpa {
         
         $.ajax({
             dataType: "json",
-            url: './json/matriz-energetica-brasil.json'
+            url: '/clean-energy/src/json/matriz-energetica-brasil.json'
         }).done((data) => {
             console.log(data.series)
             console.log(data.label)
