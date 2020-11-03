@@ -463,7 +463,7 @@ main .see-more {
     justify-content: center; }
 
 .home__hero {
-  background-image: url("/img/home_hero.jpeg");
+  background-image: url("/clean-energy/src/img/home_hero.jpeg");
   height: 500px;
   background-size: cover; }
 
@@ -472,7 +472,7 @@ main .see-more {
 
 .home .stats {
   position: relative;
-  background-image: url("/img/banner-stats.jpg");
+  background-image: url("/clean-energy/src/img/banner-stats.jpg");
   background-size: cover;
   padding: 80px 0; }
   .home .stats__overlay {
@@ -857,15 +857,15 @@ main .see-more {
     height: 100%;
     background-color: rgba(0, 0, 0, 0.2); }
   .hero.home-hero {
-    background-image: url("/img/home_hero.jpg"); }
+    background-image: url("/clean-energy/src/img/home_hero.jpg"); }
   .hero.energia-limpa-hero {
-    background-image: url("/img/energia-limpa_hero.jpg"); }
+    background-image: url("/clean-energy/src/img/energia-limpa_hero.jpg"); }
   .hero.iniciativas-hero {
-    background-image: url("/img/iniciativas_hero.jpg"); }
+    background-image: url("/clean-energy/src/img/iniciativas_hero.jpg"); }
   .hero.problema-hero {
-    background-image: url("/img/problema_hero.jpg"); }
+    background-image: url("/clean-energy/src/img/problema_hero.jpg"); }
   .hero.contato-hero {
-    background-image: url("/img/contato_hero.jpg"); }
+    background-image: url("/clean-energy/src/img/contato_hero.jpg"); }
 
 .contato-action__wrapper {
   display: flex;
